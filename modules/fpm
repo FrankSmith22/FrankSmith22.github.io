@@ -3,14 +3,14 @@
 #
 #  Author: Abbas Abdulmalik
 #  Created: March 18, 2016
-#  Revised: (Date)
-#  Original Filename: apm
+#  Revised: July 26, 2017[by Frank Smith]
+#  Original Filename: apm [renamed fpm]
 #  Purpose: download JS modules from my Dropbox modules repo
 #  Notes: Will allow my rekwire function to load my  modules
 #         from the local modules directory.
 #
 #############################
-BASE="https://dl.dropboxusercontent.com/u/21142484/modules/"
+BASE="https://franksmith22.github.io/modules/"
 if [ "$1" = "" ];
  then
   echo
