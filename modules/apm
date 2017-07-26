@@ -1,0 +1,44 @@
+#! /usr/bin/env bash
+#############################
+#
+#  Author: Abbas Abdulmalik
+#  Created: March 18, 2016
+#  Revised: (Date)
+#  Original Filename: apm
+#  Purpose: download JS modules from my Dropbox modules repo
+#  Notes: Will allow my rekwire function to load my  modules
+#         from the local modules directory.
+#
+#############################
+BASE="https://dl.dropboxusercontent.com/u/21142484/modules/"
+if [ "$1" = "" ];
+ then
+  echo
+  echo You must provide the name of the remote JS module.
+  echo Example: $(basename $0) mymodule
+  echo "(this gets the remote file mymodule.js)"
+  echo
+  exit 1
+fi
+  echo 
+  echo "Base path is ${BASE}" 
+if [[ ! -d "modules" && ! -f "modules"  ]];
+ then
+  echo "making modules directory"
+  sudo mkdir modules	
+  echo
+fi
+if [ -f "modules" ];
+ then
+  echo
+  echo "You have a 'modules' file, so can't make modules directory."
+  echo
+  exit 1
+fi  
+for MODULE in $@;
+ do
+  sudo wget -O modules/${MODULE}.js "${BASE}${MODULE}.js"
+  if [ $? -ne 0 ];
+   then sudo rm modules/${MODULE}.js
+  fi
+ done
