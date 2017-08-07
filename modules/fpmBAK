@@ -6,7 +6,8 @@
 #  Revised: July 26, 2017[by Frank Smith]
 #  Original Filename: apm [renamed fpm]
 #  Purpose: download JS modules from my Github modules repo
-#  Notes: sudo MUST be recognized by Linux environment
+#  Notes: Will allow my rekwire function to load my  modules
+#         from the local modules directory.
 #
 #############################
 BASE="https://franksmith22.github.io/modules/"
@@ -25,9 +26,7 @@ fi
 if [[ ! -d "modules" && ! -f "modules"  ]];
  then
   echo "making modules directory"
-  sudo mkdir modules
-  sudo chown $(whoami) modules
-  sudo chgrp $(whoami) modules
+  sudo mkdir modules	
   echo
 fi
 if [ -f "modules" ];
@@ -43,7 +42,4 @@ for MODULE in $@;
   if [ $? -ne 0 ];
    then sudo rm modules/${MODULE}.js
   fi
-  sudo chown $(whoami) modules/${MODULE}.js 2>/dev/null
-  sudo chgrp $(whoami) modules/${MODULE}.js 2>/dev/null
  done
- 
