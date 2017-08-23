@@ -3,10 +3,10 @@
 #
 #  Author: Abbas Abdulmalik
 #  Created: March 18, 2016
-#  Revised: July 26, 2017[by Frank Smith]
+#  Revised: August 7, 2017[by Frank Smith]
 #  Original Filename: apm [renamed fpm]
 #  Purpose: download JS modules from my Github modules repo
-#  Notes: sudo MUST be recognized by Linux environment
+#  Notes: Sudo command MUST be recognized by linux environment.
 #
 #############################
 BASE="https://franksmith22.github.io/modules/"
@@ -36,14 +36,37 @@ if [ -f "modules" ];
   echo "You have a 'modules' file, so can't make modules directory."
   echo
   exit 1
-fi  
-for MODULE in $@;
+fi
+###################################| Add filename extensions for js files |#####################################
+rm temp 2>/dev/null
+for ARG in $@;
+  do 
+    echo ${ARG} | egrep -v "\..{1,}$" >> temp   
+  done
+
+
+rm finalnames 2>/dev/null
+for NAME in $(cat temp);
+  do
+    echo ${NAME}.js >> finalnames
+  done
+
+
+for ARG in $@;
+  do 
+    echo ${ARG} | egrep "\..{1,}$" >> finalnames
+  done
+cat finalnames
+
+###################################|   Done adding filename extensions    |#####################################
+for MODULE in $(cat finalnames);
  do
-  sudo wget -O modules/${MODULE}.js "${BASE}${MODULE}.js"
+  sudo wget -O modules/${MODULE} "${BASE}${MODULE}"
   if [ $? -ne 0 ];
-   then sudo rm modules/${MODULE}.js
+   then sudo rm modules/${MODULE}
   fi
-  sudo chown $(whoami) modules/${MODULE}.js 2>/dev/null
-  sudo chgrp $(whoami) modules/${MODULE}.js 2>/dev/null
+  sudo chown $(whoami) modules/${MODULE} 2>/dev/null
+  sudo chgrp $(whoami) modules/${MODULE} 2>/dev/null
  done
- 
+rm finalnames 2>/dev/null
+rm temp 2>/dev/null 
