@@ -32,7 +32,7 @@ body{
     width: 256px;
     transform-origin: center center;
     transform: translate( -50%, -50% ) rotate(45deg);
-    border: 5px solid white;
+    border: 5px solid rgba(255, 255, 255, .80);
     overflow: hidden;
 }
 
@@ -75,5 +75,5 @@ nav.nav-center ul li a {
 
 #longAboutMe{
 	background-color: #BED5DD;
-	padding: 100px 50px;
+	/*padding: 100px 50px;*/
 }
