@@ -1,0 +1,59 @@
+body{
+	background-image: url("../images/portfolioBackground.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#frankCard{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top: 350px;
+    opacity: .75;
+}
+
+#meHolder{
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    margin-top: -128px;
+    margin-left: -128px;
+    margin-right: 0;
+    margin-bottom: 0;
+    position: relative;
+    padding: 0;
+    height: 256px;
+    width: 256px;
+    transform-origin: center center;
+    transform: rotate(45deg);
+    border: 5px solid white;
+    overflow: hidden;
+}
+
+#mePicture{
+	transform-origin: center center;
+    transform: rotate(-45deg);
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    right: -53px;
+    bottom: -55px;
+    opacity: 1;
+}
+
+#frankHeader{
+	font-family: "Ubuntu", sans-serif;
+	line-height: 100px;
+	color: #548DA0;
+	/*color: #2B2C2A;*/
+}
+
+#aboutMeHolder{
+	
+}
+
+#aboutMe{
+	color: #548DA0;
+}
