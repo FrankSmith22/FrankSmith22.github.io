@@ -73,7 +73,15 @@ nav.nav-center ul li a {
     display: inline-block;
 }
 
-#longAboutMe{
+.mountain-sky{
 	background-color: #BED5DD;
 	/*padding: 100px 50px;*/
+}
+
+.mountain-sky-text{
+	color: #548DA0;
+}
+
+#footer{
+	background-color: #397586;
 }
