@@ -19,7 +19,7 @@
     		<div id="aboutMeHolder">
     			<div class="container">
     				<p id="shortAboutMe" class="flow-text">I am a student at The Pennsylvania Institute of Technology,
-    				soon to be attending a four year college to obtain my Bachelor's. I live just south of Philadelphia, Pennsylvania,
+    				soon to be attending a four year college to obtain my Bachelor's Degree. I live just south of Philadelphia, Pennsylvania,
     				working with front-end code and back-end alike, with most of my experience so far in Javascript, HTML, and CSS</p>
     				<br><br>
     			</div>
@@ -32,7 +32,7 @@
 					<li><a href="#longAboutMe">About Me</a></li>
 					<li><a href="#education">Education</a></li>
 					<li><a href="#sideProjects">Side Projects</a></li>
-					<li><a href="#getInTouch">Get In Touch</a></li>
+					<li><a href="#contactMe">Contact Me</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -47,6 +47,7 @@
 	    		to experiment with game development.</p>
 	    		<br>
 	    		<p class="flow-text">Having grown up with a computer-loving father, I was raised to learn how computers worked, and how to put them together, etc.</p>
+	    		<br><br>
 	    	</div>
 		</div>
 	    <!-- Education -->
@@ -65,13 +66,6 @@
     					<img class="responsive-img" src="./assets/images/pitCampus.jpg">
     				</div>
     			</div>
-    			
-    		</div>
-    	</div>
-    	<!-- Parallax -->
-    	<div class="parallax-container hide-on-small-only">
-    		<div class="parallax">
-    			<img src="./assets/images/threeAmigos.png" class="responsive-img">
     		</div>
     	</div>
     	<!-- Side Projects -->
@@ -80,6 +74,7 @@
     			<br>
     			<h2>Side Projects</h2>
     			<div class="row">
+    				<!-- card col -->
     				<div class="col xl3 l4 m6 s12">
     					<div class="card">
     						<div class="card-image">
@@ -93,17 +88,67 @@
     								An e-commerce site developed with classmates that will allow users at PIT to
     								sell their old schoolware to other users, such as old textbooks, calculators, etc.
     							</p>
+    							<br>
+    							<p class="orange-text text-darken-2 center">
+    								This project is still a work in progress.
+    							</p>
     						</div>
     					</div>
     				</div>
+    				<!---->
+    				<!-- card col -->
+    				<div class="col xl3 l4 m6 s12">
+    					<div class="card">
+    						<div class="card-image">
+    							<!-- DONT FORGET TO EVENTUALLY PUT GITHUB LINK -->
+    							<a href="https://aaserver.abbas411.com/code/workspace/misc_frank_projects/SocketMessaging/">
+    								<img src="./assets/images/codiadChatLogo192x192.png">
+    							</a>
+    						</div>
+    						<div class="card-content">
+    							<p>
+    								An app using Node.js and sockets to send messages between anyone connected to the public lobby.
+    							</p><br>
+    							<p class="orange-text text-darken-2 center">
+    								This project is still a work in progress.
+    							</p>
+    						</div>
+    					</div>
+    				</div>
+    				<!---->
     			</div>
     		</div>
     	</div>
     	<!-- Get In Touch -->
-    	<div id="getInTouch" class="section scrollspy grey lighten-3">
+    	<div id="contactMe" class="section scrollspy grey lighten-3">
     		<div class="container">
     			<br>
     			<h2>Get In Touch</h2>
+    			<!-- insert materialize example form here -->
+				<form class="row">
+					<div class="col s12 m6 l6 xl6">
+						<div class="row">
+							<div class="input-field col s12 m6 l6 xl6">
+								<input id="firstNameField" type="text" class="validate">
+								<label for="firstNameField">First name</label>
+							</div>
+							<div class="input-field col s12 m6 l6 xl6">
+								<input id="lastNameField" type="text" class="validate">
+								<label for="lastNameField">Last name</label>
+							</div>
+						</div>
+						<div class="input-field">
+							<input id="emailField" type="email" class="validate">
+							<label for="emailField">Email</label>
+						</div>
+					</div>
+					<div class="col s12 m6 l6 xl6">
+						<div class="input-field">
+							<textarea id="contactTextArea" class="materialize-textarea" maxlength="1500"></textarea>
+							<label for="contactTextArea">Message</label>
+						</div>
+					</div>
+				</form>
     		</div>
     	</div>
     	<!-- FOOTER -->
@@ -151,6 +196,6 @@
 		<script src="assets/js/materialize.js"></script>
         <script src="assets/js/script.js"></script>
         
-        <script> window.onload = initialize </script>
+        <script>window.onload = initialize</script>
     </body>
 </html>
