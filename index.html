@@ -125,28 +125,40 @@
     			<br>
     			<h2>Get In Touch</h2>
     			<!-- insert materialize example form here -->
-				<form class="row">
-					<div class="col s12 m6 l6 xl6">
-						<div class="row">
-							<div class="input-field col s12 m6 l6 xl6">
-								<input id="firstNameField" type="text" class="validate">
-								<label for="firstNameField">First name</label>
+				<form action="https://formspree.io/fasvi6@gmail.com" method="post">
+					<div class="row">
+						<div class="col s12 m6 l6 xl6">
+							<div class="row">
+								<div class="input-field col s12 m6 l6 xl6">
+									<input id="firstNameField" name="firstNameField" type="text" class="validate" required>
+									<label for="firstNameField">First name</label>
+								</div>
+								<div class="input-field col s12 m6 l6 xl6">
+									<input id="lastNameField" name="lastNameField" type="text" class="validate" required>
+									<label for="lastNameField">Last name</label>
+								</div>
 							</div>
-							<div class="input-field col s12 m6 l6 xl6">
-								<input id="lastNameField" type="text" class="validate">
-								<label for="lastNameField">Last name</label>
+							<div class="input-field">
+								<input id="emailField" name="emailField" type="email" class="validate" required>
+								<label for="emailField">Email</label>
+							</div>
+							<div class="input-field">
+								<input id="subjectField" name="subjectField" type="text" class="validate" required>
+								<label for="subjectField">Subject</label>
 							</div>
 						</div>
-						<div class="input-field">
-							<input id="emailField" type="email" class="validate">
-							<label for="emailField">Email</label>
+						<div class="col s12 m6 l6 xl6">
+							<div class="input-field">
+								<textarea id="contactTextArea" name="contactTextArea" class="materialize-textarea" required></textarea>
+								<label for="contactTextArea">Message</label>
+							</div>
 						</div>
 					</div>
-					<div class="col s12 m6 l6 xl6">
-						<div class="input-field">
-							<textarea id="contactTextArea" class="materialize-textarea" maxlength="1500"></textarea>
-							<label for="contactTextArea">Message</label>
-						</div>
+					<div class="valign-wrapper submitButtonWrapper">
+						<button class="btn waves-effect waves-light brown lighten-1 center" type="submit" name="submit" value="Submit">
+							Send Message
+							<i class="material-icons right">send</i>
+						</button>
 					</div>
 				</form>
     		</div>

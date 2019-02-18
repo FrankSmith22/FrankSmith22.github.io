@@ -86,6 +86,12 @@ nav.nav-center ul li a {
 	color: #548DA0;
 }
 
+.submitButtonWrapper{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 #footer{
 	background-color: #397586;
 }
