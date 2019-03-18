@@ -38,16 +38,17 @@ body{
     transform: translate( -50%, -50% ) rotate(45deg);
     border: 5px solid rgba(255, 255, 255, .80);
     overflow: hidden;
+    background: rgb(156, 144, 134);
 }
 
 #mePicture{
 	transform-origin: center center;
     transform: rotate(-45deg);
-    height: 350px;
+    height: auto;
     width: 350px;
     position: absolute;
-    right: -53px;
-    bottom: -55px;
+    right: -59px;
+    bottom: -108px;
     opacity: 1;
 }
 
