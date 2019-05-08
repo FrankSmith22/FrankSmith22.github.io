@@ -35,10 +35,14 @@ body{
     height: 256px;
     width: 256px;
     transform-origin: center center;
-    transform: translate( -50%, -50% ) rotate(45deg);
+    transform: translate( -418%, -50% ) rotate(45deg);
     border: 5px solid rgba(255, 255, 255, .80);
     overflow: hidden;
     background: rgb(156, 144, 134);
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.04, 0.66, 0.51, 1.35);
+    transition-delay: 0s;
 }
 
 #mePicture{
@@ -57,14 +61,19 @@ body{
 	line-height: 100px;
 	color: #548DA0;
 	/*color: #2B2C2A;*/
+	opacity: 0;
 }
 
 #aboutMeHolder{
-	
+	color: #548DA0;
+	opacity: 0;
 }
 
-#shortAboutMe{
-	color: #548DA0;
+#frankHeader, #aboutMeHolder{
+	transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
 }
 
 nav.nav-center ul {
