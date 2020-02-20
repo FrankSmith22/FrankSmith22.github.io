@@ -105,3 +105,12 @@ nav.nav-center ul li a {
 #footer{
 	background-color: #397586;
 }
+
+.sideProjectScroll{
+	overflow-x: auto;
+ 	white-space: nowrap;
+}
+
+.card{
+	white-space: initial;
+}
