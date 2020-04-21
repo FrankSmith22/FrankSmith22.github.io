@@ -6,7 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
-    "start": "npm run lite"
+    "start": "npm run lite",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin && npm run copydocuments",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "copydocuments": "copyfiles -f assets/documents/FrankSmithResume.pdf dist/assets/documents",
+    "imagemin": "imagemin assets/images/* -o dist/assets/images",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html"
   },
   "author": "Frank Smith",
   "license": "ISC",
@@ -18,6 +24,10 @@
     "popper.js": "^1.12.9"
   },
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "copyfiles": "^2.0.0",
+    "imagemin-cli": "^3.0.0",
+    "lite-server": "^2.3.0",
+    "rimraf": "^2.6.2",
+    "usemin-cli": "^0.5.1"
   }
 }

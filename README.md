@@ -1,1 +1,0 @@
-+ Materialize: Full Width Carousel
